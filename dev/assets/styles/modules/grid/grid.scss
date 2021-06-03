@@ -55,6 +55,46 @@
   
     .container {
       width: 1540px;
+      padding: 0 60px;
     }
     
+  }
+
+  .container--bg-line {
+    position: relative;
+  }
+  
+  .bg-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    //Высоту элемента получаем через JS(Файл main.js).
+  }
+  
+  .bg-line__item {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #fff;
+    opacity: 0.1;
+  }
+  
+  .bg-line__item:nth-child(2) {
+    left: 25%;
+  }
+  
+  .bg-line__item:nth-child(3) {
+    left: 50%;
+  }
+  
+  .bg-line__item:nth-child(4) {
+    left: 75%;
+  }
+  
+  .bg-line__item:nth-child(5) {
+    left: 100%;
   }

@@ -22,3 +22,126 @@ body.compensate-for-scrollbar {
 .fancybox-slide--html .fancybox-close-small {
     display: none;
 }
+
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header-wrapper__left {
+    width: 50%;
+}
+
+.header-contact__list {
+    display: flex;
+    align-items: center;
+}
+
+a.header-contact__item {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+        color: $red;
+
+        .header-contact__item-icon svg path {
+            fill: $red;
+        }
+
+    }
+
+}
+
+.header-contact__item-icon svg {
+    width: 24px;
+    height: auto;
+    transition: .3s;
+
+    path {
+        transition: .3s;
+    }
+
+}
+
+p.header-contact__item-text {
+    padding-left: 15px;
+}
+
+
+.header-wrapper__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul.header-social__list {
+    display: flex;
+    align-items: center;
+}
+
+li.header-social__item {
+    margin-right: 40px;
+
+    a {
+        position: relative;
+        display: block;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: #fff;
+            transition: .3s ease-in-out;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+    }
+
+}
+
+.menu-burger {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+
+    &:hover .menu-burger__line {
+        width: 100%;
+    }
+
+}
+
+.menu-burger__line {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.menu-burger__line:nth-child(2) {
+    width: 75%;
+}
+
+.menu-burger__line:nth-child(3) {
+    width: 50%;
+    margin-bottom: 0;
+}

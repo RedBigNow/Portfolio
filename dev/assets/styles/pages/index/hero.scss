@@ -1,0 +1,15 @@
+.hero {
+    position: relative;
+    height: 100vh;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        background: $red;
+    }
+
+}
