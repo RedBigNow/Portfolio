@@ -1,0 +1,11 @@
+.DS_store
+.idea
+/*.exe.stackdump
+
+/dev
+/node_modules
+/gulp
+.csscomb.json
+gulpfile.js
+package-lock.json
+package.json
