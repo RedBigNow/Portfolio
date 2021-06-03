@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    flex: 0 0 auto;
+    z-index: 99999;
+    width: 100%;
+}
+
+//Фикс бага со скачком шапки при открытии fancybox
+body.compensate-for-scrollbar {
+    overflow: auto !important;
+}
+
+.compensate-for-scrollbar {
+    margin-right: 0 !important;
+}
+
+.fancybox-container {
+    z-index: 99999;
+}
+
+//Скрытие стандартной кнопки закрытия fancybox
+.fancybox-slide--html .fancybox-close-small {
+    display: none;
+}

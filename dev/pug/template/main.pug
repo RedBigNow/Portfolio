@@ -1,0 +1,36 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		link(rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css")
+		link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+		link(rel="stylesheet" type='text/css' href="assets/css/styles.min.css")
+		link(rel="icon" href="/assets/images/general/favicon.ico" type="image/ico")
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		.wrapper
+			include ../blocks/header/header
+			.content
+				block content
+			include ../blocks/footer/footer
+		script(src="assets/js/jquery-3.3.1.min.js")
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js")
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="assets/js/jquery.enllax.min.js")
+		script(src="assets/js/inputmask.js")
+		script(src="assets/js/libs.min.js")
+		script(src="assets/js/main.js")
+		block script

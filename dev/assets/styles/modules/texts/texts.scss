@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 160%;
+  letter-spacing: 0.01em;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 576px) {
+
+  p {
+    font-size: 14px;
+  }
+
+}
+
+a {
+  letter-spacing: 0.01em;
+}
+
+a, a:visited, a:focus, a:active, a:hover {
+  outline: 0 none !important;
+}

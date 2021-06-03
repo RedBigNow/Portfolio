@@ -1,0 +1,136 @@
+@import "modules/utils/libs";
+
+@import "modules/utils/vars";
+
+@import "modules/utils/mixins";
+
+html {
+  height: 100%;
+  font-size: $base-font-size;
+  color: $black;
+  background-color: #fff;
+}
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd { margin: 0; }
+
+a:not([class]) { text-decoration-skip-ink: auto; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section {
+  position: relative;
+  overflow-x: hidden;
+}
+
+section.page-content {
+  overflow-x: visible;
+}
+
+input,
+select,
+button { outline: none; }
+
+textarea {
+  outline: 0 none !important;
+}
+
+div {
+  outline: 0 none !important;
+}
+
+@import "modules/fonts/fonts"; // Fonts
+
+@import "modules/grid/grid"; // Grid (Container)
+
+@import "modules/header/header"; // Header
+
+@import "modules/buttons/buttons"; // Buttons
+
+@import "modules/texts/texts"; // Titles & Text
+
+@import "modules/animations/animations"; // Animations
+
+// Main
+@import "pages/index/hero";
+
+// About
+@import "pages/about/about";
+
+// 404
+@import "pages/not-found/not-found";
+
+
+@import "modules/footer/footer"; // Footer
+
+@import "modules/popups/popups"; // Popups
+
+
+
+
+
+
