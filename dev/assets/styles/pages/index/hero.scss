@@ -1,15 +1,351 @@
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
 
     &::after {
         content: '';
         position: absolute;
         right: 0;
         top: 0;
+        z-index: -2;
         width: 50vw;
         height: 100vh;
         background: $red;
     }
 
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-wrapper__left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    padding: 14% 60px 14% 0;
+    
+}
+
+h1.hero-title {
+    position: relative;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 100px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        height: 2px;
+        width: 100px;
+        background: #fff;
+    }
+}
+
+
+h2.hero-subtitle {
+    color: $red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    min-height: 300px;
+    margin-bottom: 80px;
+
+    span {
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $red;
+        padding-left: 80px;
+    }
+
+}
+
+.hero-statistic__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-statistic__item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+p.statistic-numeral {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 125%;
+    color: #fff;
+    margin: 0;
+}
+
+p.statistic-text {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.hero-wrapper__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    padding: 14% 0 14% 60px;
+    z-index: 9;
+
+    .hero-slider__container {
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 80px;
+        overflow: visible;
+    }
+}
+
+
+h2.portfolio-title {
+    text-align: right;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    margin-bottom: 100px;
+}
+
+
+.portfolio-slider__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    transition: .3s;
+
+    &.swiper-slide-active .portfolio-slider__item-left img {
+        transform: rotate(20deg) scale(1.8) translateX(-20px);
+    }
+}
+
+.portfolio-slider__item-left {
+    width: 30%;
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: 1s;
+        
+    }
+
+}
+
+.portfolio-slider__item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70%;
+    text-align: right;
+    padding-left: 100px;
+}
+
+a.portfolio-slider__item-site {
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: .3s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: #fff;
+        transition: .3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+}
+
+p.portfolio-slider__item-task {
+    max-width: 240px;
+    border-right: 2px solid #fff;
+    padding-right: 10px;
+    margin: 10px 0 20px 0;
+}
+
+p.portfolio-slider__item-descr {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+a.portfolio-slider__item-detail {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 85px 12px 25px;
+    transition: .2s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 25px;
+        top: 0;
+        background: url('../images/general/arrow-right.svg') no-repeat 100%;
+        width: 40px;
+        height: 100%;
+        transition: .2s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        transition: .2s;
+    }
+
+    &:hover {
+
+        padding: 12px 55px 12px 35px;
+        
+        &::before {
+            right: -20px;
+        }
+
+        &::after {
+            top: -2px;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+    }
+}
+
+.btn-wrapper--hero-left {
+    position: absolute;
+    bottom: -1px;
+    left: -30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a.btn:hover svg path {
+        fill: $black;
+    }
+
+}
+
+.hero-slider__nav {
+    position: relative;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0 10px 0;
+}
+
+.swiper-pagination--hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        background: $red;
+        border: 1px solid #fff;
+        margin: 0 !important;
+        opacity: 1;
+        transition: .3s;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+.pagination-line {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.swiper-counter {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.btn-wrapper--hero-left a.btn svg {
+    width: 14px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.btn-wrapper--hero-left a.btn svg path {
+    transition: .3s;
+}
+
+.btn-wrapper--hero-right {
+    position: absolute;
+    bottom: -1px;
+    right: -30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a.btn:hover svg path {
+        fill: $black;
+    }
+
+}
+
+.btn-wrapper--hero-right a.btn svg {
+    width: 14px;
+    height: auto;
+    margin-left: 10px;
+    transition: .3s;
+}
+
+.btn-wrapper--hero-right a.btn svg path {
+    transition: .3s;
 }
