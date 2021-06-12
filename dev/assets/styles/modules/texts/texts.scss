@@ -29,6 +29,17 @@ h6 {
   font-size: 14px;
 }
 
+h2.section-title {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
 p {
   font-size: 18px;
   font-weight: normal;

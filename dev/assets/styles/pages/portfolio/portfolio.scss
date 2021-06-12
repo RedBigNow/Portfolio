@@ -1,0 +1,121 @@
+.portfolio {
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 50%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top, bottom;
+
+    &::-webkit-scrollbar { /* chrome based */
+        width: 0px;  /* ширина scrollbar'a */
+        background: transparent;  /* опционально */
+    }
+}
+
+.project-list {
+    position: relative;
+    padding: 45vh 0 30vh 0;
+    counter-reset: number;
+}
+
+.project-item {
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 140px;
+        height: 1px;
+        background: #fff;
+        opacity: 0.2;
+    }
+
+    a {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+
+        &:hover {
+        
+            ~ p.project-item__descr {
+                opacity: 1;
+            }
+    
+            ~ .project-item__img {
+                right: 0;
+                opacity: 1;
+            }
+    
+        }
+    }
+}
+
+h2.project-item__title {
+    font-weight: 900;
+    font-size: 62px;
+    line-height: 125%;
+    letter-spacing: 0.08em;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    padding-bottom: 10px;
+    padding-right: 10%;
+    margin: 0;
+    transition: .3s;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+p.project-item__descr {
+    position: relative;
+    font-size: 18px;
+    padding-right: 25%;
+    opacity: 0.3;
+    transition: .3s;
+
+    &::before {
+        counter-increment: number;
+        content: counter(number);
+        counter-increment: number;
+        content: '0' counter(number)'.';
+        font-size: 24px;
+        font-weight: 600;
+        padding-right: 5px;
+        color: #fff;
+        opacity: .3;
+        transition: .3s;
+    }
+}
+
+.project-item__img {
+    position: absolute;
+    right: -5%;
+    top: -80px;
+    opacity: 0;
+    transform: rotate(5deg);
+    transition: .3s;
+
+    img {
+        width: 520px;
+        height: 320px;
+        object-fit: cover;
+    }
+}
+
+.portfolio-scroll img {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    width: 100px;
+    height: 100px;
+}

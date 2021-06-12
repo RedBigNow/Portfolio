@@ -5,6 +5,14 @@ header {
     width: 100%;
 }
 
+.header--sticky {
+    background-color: rgba(31, 34, 40, 0.8);
+}
+
+.scroll-disable {
+    overflow: hidden;
+}
+
 //Фикс бага со скачком шапки при открытии fancybox
 body.compensate-for-scrollbar {
     overflow: auto !important;
@@ -21,6 +29,76 @@ body.compensate-for-scrollbar {
 //Скрытие стандартной кнопки закрытия fancybox
 .fancybox-slide--html .fancybox-close-small {
     display: none;
+}
+
+//Анимация при переходе на другую страницу
+.transition-pages__before {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+}
+
+.transition-pages__before-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background: $black;
+    border: 1px solid $black;
+    transition: .7s;
+}
+
+
+.transition-pages__before-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: $red;
+    border: 1px solid $red;
+    transition: .7s;
+}
+
+//Анимация после перехода на новую страницу
+.transition-pages__after {
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg) scale(5);
+    transition: 1.4s;
+}
+
+.transition-pages__after-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: $black;
+    border: 1px solid $black;
+    transition: 1.4s;
+}
+
+
+.transition-pages__after-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: $red;
+    border: 1px solid $red;
+    transition: 1.4s;
 }
 
 .header-wrapper {
@@ -144,4 +222,119 @@ li.header-social__item {
 .menu-burger__line:nth-child(3) {
     width: 50%;
     margin-bottom: 0;
+}
+
+.menu-burger--active {
+    height: 50px;
+    z-index: 9;
+
+    .menu-burger__line {
+        transform: rotate(-45deg) translate(-18px, 17px);
+    }
+
+    .menu-burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-burger__line:nth-child(3) {
+        width: 100%;
+        transform: rotate(45deg) translate(-3px, -3px);
+    }
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $black;
+    padding: 20vh 0;
+
+    .container {
+        height: 100%;
+    }
+}
+
+.menu-bg__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    background: $red;
+}
+
+.menu-bg__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    background: $black;
+}
+
+nav.nav-menu {
+    position: relative;
+    height: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 35%;
+        bottom: -5%;
+        background: url(../images/general/shape-ball.png) no-repeat;
+        background-size: 100%;
+        width: 95px;
+        height: 95px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        background: url(../images/general/shape-ball.png) no-repeat;
+        background-size: 100%;
+        width: 180px;
+        height: 180px;
+    }
+}
+
+ul.nav-menu__list {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: -15%;
+        background: url(../images/general/shape-ball.png) no-repeat;
+        background-size: 100%;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+a.nav-menu__item-link {
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 125%;
+    letter-spacing: 0.08em;
+    color: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    transition: .3s;
+
+    &:hover {
+        color: #fff;
+    }
 }
