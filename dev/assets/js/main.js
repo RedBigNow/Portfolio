@@ -139,30 +139,48 @@ $(document).ready(function () {
         }
     });
 
-    //Кнопка "Наверх"
-    (function () {
-
-        $(document).on('scroll', function () {
-        if ($(document).scrollTop() > 800) {
-            $('.back-top').show();
-        } else {
-            $('.back-top').hide();
-        }
-        });
-
-        $('.back-top').on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 'slow');
-        return false;
-        });
-
-    })();
-
 
 });
 
+//Parallax эффект при движении мыши у назначенных элементов
+$(window).on('mousemove', function (e) {
 
-//Инилиализируем библиотеку для анимаций exllax
+    var mouseX = e.pageX / 2; //Получаем число для движения элемента по оси "Z"
+    var mouseY = e.pageY / 2; //Получаем число для движения элемента по оси "Y"
+
+    $('.parallax').each(function () {
+    var z = parseInt($(this).data("z"));
+    var y = parseInt($(this).data("y"));
+        $(this).css('transform', 'translate(' + (mouseX * (z * 0.010)) + 'px, '  + (mouseY * (y * 0.01)) + 'px)');
+    });
+    
+});
+
+//Инициализация библиотеки с анимациями (AOS)
+AOS.init({
+    disable: 'mobile'
+});
+
+//Инилиализируем библиотеку с анимациями exllax
 $(window).enllax();
 
+
+//Кнопка "Наверх"
+(function () {
+
+    $(document).on('scroll', function () {
+    if ($(document).scrollTop() > 800) {
+        $('.back-top').show();
+    } else {
+        $('.back-top').hide();
+    }
+    });
+
+    $('.back-top').on('click', function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
+    return false;
+    });
+
+})();

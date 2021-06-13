@@ -178,14 +178,15 @@ ul.skills-col__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-top: 60px;
 }
 
 .back-end__wrapper-left {
     width: 40%;
 
     img {
-        margin: 0 auto;
         width: 80%;
+        margin-top: -10%;
     }
 }
 

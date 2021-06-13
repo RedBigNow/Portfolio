@@ -40,7 +40,7 @@ body.compensate-for-scrollbar {
     top: 0;
     width: 100%;
     height: 100%;
-    transition: .7s;
+    transition: .3s;
 }
 
 .transition-pages__before-top {
@@ -51,7 +51,7 @@ body.compensate-for-scrollbar {
     height: 0;
     background: $black;
     border: 1px solid $black;
-    transition: .7s;
+    transition: .3s;
 }
 
 
@@ -63,7 +63,7 @@ body.compensate-for-scrollbar {
     height: 0;
     background: $red;
     border: 1px solid $red;
-    transition: .7s;
+    transition: .3s;
 }
 
 //Анимация после перехода на новую страницу
@@ -75,7 +75,7 @@ body.compensate-for-scrollbar {
     width: 100%;
     height: 100%;
     transform: rotate(90deg) scale(5);
-    transition: 1.4s;
+    transition: 1s;
 }
 
 .transition-pages__after-top {
@@ -86,7 +86,7 @@ body.compensate-for-scrollbar {
     height: 50%;
     background: $black;
     border: 1px solid $black;
-    transition: 1.4s;
+    transition: 1s;
 }
 
 
@@ -98,7 +98,7 @@ body.compensate-for-scrollbar {
     height: 50%;
     background: $red;
     border: 1px solid $red;
-    transition: 1.4s;
+    transition: 1s;
 }
 
 .header-wrapper {
