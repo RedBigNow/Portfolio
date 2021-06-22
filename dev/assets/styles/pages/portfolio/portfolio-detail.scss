@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
     margin-bottom: 100px;
+    height: 100vh;
 }
 
 .project-hero__bg {
@@ -12,8 +12,8 @@
     left: 0;
     top: 0;
     z-index: -2;
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     img {
         width: 100%;
@@ -24,39 +24,37 @@
 }
 
 .project-hero__preview {
-    width: 80%;
-    padding: 100px 60px;
     margin: 0 auto;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 40px;
+    padding: 100px 60px;
+    width: 80%;
     background: radial-gradient(141.35% 265.73% at -17.69% -17.04%, rgba(162, 221, 255, 0.1296) 0%, rgba(161, 221, 255, 0) 100%);
     backdrop-filter: blur(30px);
 }
 
 h1.project-hero__title {
     font-weight: 900;
-    font-size: 42px;
+    font-size: 2.3rem;
     line-height: 150%;
     text-align: center;
     text-transform: uppercase;
 }
 
 .project-hero__link {
+    padding: 20px 0 45px;
     text-align: center;
-    padding: 20px 0 45px 0;
 
     a {
-
         svg {
             width: 24px;
 
-            &:hover path {
-                fill: #fff;
-                
+            path {
+                transition: 0.3s;
             }
 
-            path {
-                transition: .3s;
+            &:hover path {
+                fill: #fff;
             }
         }
     }
@@ -73,21 +71,21 @@ h1.project-hero__title {
     text-align: center;
 
     h2 {
+        margin: 0 0 15px;
         font-weight: 600;
-        font-size: 24px;
-        margin: 0 0 15px 0;
+        font-size: 1.3rem;
     }
-    
+
     p {
         margin: 0;
     }
 
     a {
-        color: $red;
+        margin: 0;
         text-decoration: none;
         text-transform: uppercase;
-        margin: 0;
-        transition: .3s;
+        color: $red;
+        transition: 0.3s;
 
         &:hover {
             color: #fff;
@@ -96,62 +94,133 @@ h1.project-hero__title {
 }
 
 .project-hero__nav {
-    padding-top: 80px;
     display: flex;
     justify-content: center;
+    padding-top: 80px;
 }
 
 a.project-hero__nav-el {
     margin: 0 15px;
-    opacity: .5;
-    transition: .3s;
+    opacity: 0.5;
+    transition: 0.3s;
 
     &:hover {
         opacity: 1;
     }
 }
 
-.shift-text__top {
+@media screen and (max-width: 1400px) {
+    .project-hero__preview {
+        padding: 80px;
+        width: 90%;
+    }
 
-    margin-left: -100vw;
+    h1.project-hero__title {
+        font-size: 1.5rem;
+    }
 
-    p {
-        font-weight: 900;
-        font-size: 82px;
-        line-height: 125%;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        white-space: nowrap;
-    
-        span {
-            color: transparent;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #fff;
+    .project-hero__col {
+        h2 {
+            font-size: 1rem;
         }
     }
 }
 
-.shift-text__bottom {
+@media screen and (max-width: 1200px) {
+    .project-hero__preview {
+        padding: 40px;
+    }
 
-    margin-left: -100vw;
+    h1.project-hero__title {
+        font-size: 1.2rem;
+    }
+}
 
-    p {
-        font-weight: 900;
-        font-size: 82px;
-        line-height: 125%;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        white-space: nowrap;
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
-    
-        span {
-            color: #fff;
-        
+@media screen and (max-width: 992px) {
+    .project-hero__preview {
+        padding: 40px;
+        width: 100%;
+    }
+
+    h1.project-hero__title {
+        font-size: 1.1rem;
+    }
+
+    .project-hero__col {
+        h2 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.8rem;
         }
     }
 }
+
+@media screen and (max-width: 769px) {
+    .project-hero {
+        margin-bottom: 40px;
+        padding: 100px 0;
+        height: auto;
+    }
+
+    .project-hero__link {
+        padding: 20px 0 30px;
+    }
+
+    .project-hero__col {
+        margin-bottom: 40px;
+        width: 100%;
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1rem;
+        }
+
+        p {
+            padding: 0 15%;
+            font-size: 0.8rem;
+        }
+    }
+
+    .project-hero__nav {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .project-hero {
+        margin-bottom: 20px;
+    }
+
+    .project-hero__preview {
+        padding: 30px;
+    }
+
+    h1.project-hero__title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-transform: none;
+    }
+
+    .project-hero__col {
+        h2 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    h1.project-hero__title {
+        font-size: 1rem;
+    }
+}
+
+// Колонки с информацией о проекте
 
 .project-info {
     padding-top: 120px;
@@ -164,66 +233,174 @@ a.project-hero__nav-el {
     justify-content: space-between;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 25%;
-        background: url(../images/general/shape-ball.png) no-repeat;
-        background-size: 100%;
         width: 105px;
         height: 105px;
+        background: url("../images/general/shape-ball.png") no-repeat;
+        background-size: 100%;
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: -15%;
-        background: url(../images/general/shape-ball.png) no-repeat;
-        background-size: 100%;
         width: 145px;
         height: 145px;
+        background: url("../images/general/shape-ball.png") no-repeat;
+        background-size: 100%;
     }
 }
 
 .project-col {
-    width: 46%;
     margin-bottom: 100px;
+    width: 46%;
 }
 
 .project-col--large {
     position: relative;
+    padding: 0 20%;
     width: 100%;
     text-align: center;
-    padding: 0 20%;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 30%;
         top: -50%;
-        background: url(../images/general/shape-ball.png) no-repeat;
-        background-size: 100%;
         width: 50px;
         height: 50px;
+        background: url("../images/general/shape-ball.png") no-repeat;
+        background-size: 100%;
     }
 }
 
 h2.project-col__title {
     font-weight: 900;
-    font-size: 38px;
-    line-height: 125%;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: transparent;
+    font-size: 2.1rem;
+    letter-spacing: 0.2rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
+    text-transform: uppercase;
+    color: transparent;
 }
 
 .project-col__text {
-    opacity: .8;
+    opacity: 0.8;
 }
 
+@media screen and (max-width: 992px) {
+    .project-row {
+        &::before {
+            left: 65%;
+            top: 30%;
+        }
+
+        &::after {
+            right: -5%;
+            top: -12%;
+        }
+    }
+
+    .project-col--large {
+        padding: 0;
+        text-align: left;
+
+        &::before {
+            left: 30%;
+            top: -40%;
+        }
+    }
+
+    .project-col {
+        margin-bottom: 100px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .project-row {
+        &::before {
+            left: 50%;
+            top: 30%;
+            width: 75px;
+            height: 75px;
+        }
+
+        &::after {
+            right: 0%;
+            top: -5%;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .project-col--large {
+        &::before {
+            left: 15%;
+            top: -30%;
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .project-col {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .project-info {
+        padding-top: 90px;
+    }
+
+    .project-row {
+        &::before {
+            left: 44%;
+            top: 30%;
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    .project-col--large {
+        &::before {
+            left: 15%;
+            top: -28%;
+            width: 25px;
+            height: 25px;
+        }
+
+        &::after {
+            right: 0%;
+            top: -10%;
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .project-col {
+        margin-bottom: 40px;
+    }
+
+    h2.project-col__title {
+        font-weight: 900;
+        font-size: 1.4rem;
+        -webkit-text-stroke-width: 0;
+        -webkit-text-stroke-color: transparent;
+        color: #fff;
+    }
+
+    .project-col__text p {
+        font-size: 0.8rem;
+    }
+}
+
+// Навигация по проектам
 .project-bottom {
     padding: 60px 0;
 }
@@ -231,8 +408,8 @@ h2.project-col__title {
 .project-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 0 30%;
 }
 
@@ -240,18 +417,17 @@ a.project-nav__el {
     display: block;
     width: 25%;
 
-    &:hover {
-
-        img {
-            opacity: 1;
-        }
-    }
-
     img {
         margin: 0 auto;
         width: 55px;
-        opacity: .5;
-        transition: .3s;
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        img {
+            opacity: 1;
+        }
     }
 }
 
@@ -261,9 +437,77 @@ a.project-nav__el {
 
     h3 {
         font-weight: 900;
-        font-size: 18px;
-        line-height: 125%;
-        letter-spacing: 0.02em;
+        font-size: 1rem;
         text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .project-nav {
+        padding: 0 25%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .project-nav {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .project-nav {
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .project-bottom {
+        padding: 40px 0;
+    }
+
+    .project-nav {
+        padding: 0;
+    }
+
+    a.project-nav__el {
+        img {
+            width: 45px;
+            opacity: 1;
+        }
+    }
+
+    .project-active__title {
+        h3 {
+            font-weight: 800;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    a.project-nav__el {
+        img {
+            width: 35px;
+        }
+    }
+
+    .project-active__title {
+        h3 {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .project-nav {
+        justify-content: space-between;
+    }
+
+    a.project-nav__el {
+        width: 15%;
+    }
+
+    .project-active__title {
+        width: 70%;
     }
 }

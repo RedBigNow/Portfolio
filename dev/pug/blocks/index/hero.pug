@@ -1,66 +1,72 @@
 section.hero
     .container
-        .hero-wrapper
-            .hero-wrapper__left
-                h1.hero-title Никита Соколов
-                h2.hero-subtitle Front-end <span>Разработчик</span>
-                .hero-statistic__list 
-                    .hero-statistic__item
-                        p.statistic-numeral 3
-                        p.statistic-text года опыта<br>в web-разработке
-                    .hero-statistic__item
-                        p.statistic-numeral 20+
-                        p.statistic-text Реализованных проектов
-                .btn-wrapper.btn-wrapper--hero-left
-                    a(href="/about.html").btn Обо мне <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L15.0711 10.3431C15.4616 9.95262 15.4616 9.31946 15.0711 8.92893C14.6805 8.53841 14.0474 8.53841 13.6569 8.92893L8 14.5858L2.34315 8.92893C1.95262 8.53841 1.31946 8.53841 0.928932 8.92893C0.538407 9.31946 0.538407 9.95262 0.928932 10.3431L7.29289 16.7071ZM7 -4.37114e-08L7 16L9 16L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/></svg>
-            .hero-wrapper__right
-                h2.portfolio-title Портфолио
-                .hero-slider__container
-                    .portfolio-slider__list.swiper-wrapper
-                        .portfolio-slider__item.swiper-slide
-                            .portfolio-slider__item-left 
-                                img(src="/assets/images/general/slide-test.png", alt="")
-                            .portfolio-slider__item-right
-                                a.portfolio-slider__item-site(href="#") pod-zamkom.ru 1
-                                p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
-                                p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
-                        .portfolio-slider__item.swiper-slide
-                            .portfolio-slider__item-left 
-                                img(src="/assets/images/general/slide-test.png", alt="")
-                            .portfolio-slider__item-right
-                                a.portfolio-slider__item-site(href="#") pod-zamkom.ru 2
-                                p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
-                                p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
-                        .portfolio-slider__item.swiper-slide
-                            .portfolio-slider__item-left 
-                                img(src="/assets/images/general/slide-test.png", alt="")
-                            .portfolio-slider__item-right
-                                a.portfolio-slider__item-site(href="#") pod-zamkom.ru 3
-                                p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
-                                p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
-                        .portfolio-slider__item.swiper-slide
-                            .portfolio-slider__item-left 
-                                img(src="/assets/images/general/slide-test.png", alt="")
-                            .portfolio-slider__item-right
-                                a.portfolio-slider__item-site(href="#") pod-zamkom.ru 4
-                                p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
-                                p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
-                        .portfolio-slider__item.swiper-slide
-                            .portfolio-slider__item-left 
-                                img(src="/assets/images/general/slide-test.png", alt="")
-                            .portfolio-slider__item-right
-                                a.portfolio-slider__item-site(href="#") pod-zamkom.ru 5
-                                p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
-                                p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
-                .hero-slider__nav
-                    .swiper-pagination.swiper-pagination--hero
-                    .pagination-line
-                    .swiper-counter
-                        <span class="current">1</span> / <span class="total">0</span>
-                .btn-wrapper.btn-wrapper--hero-right
-                    a(href="/portfolio.html").btn Все работы <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L15.0711 10.3431C15.4616 9.95262 15.4616 9.31946 15.0711 8.92893C14.6805 8.53841 14.0474 8.53841 13.6569 8.92893L8 14.5858L2.34315 8.92893C1.95262 8.53841 1.31946 8.53841 0.928932 8.92893C0.538407 9.31946 0.538407 9.95262 0.928932 10.3431L7.29289 16.7071ZM7 -4.37114e-08L7 16L9 16L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/></svg>
+        .hero-content
+            .hero-wrapper.swiper-wrapper
+                .hero-wrapper__nav 
+                    .hero-wrapper__nav-prev
+                        img(src="/assets/images/general/red-arrow.svg", alt="")
+                    .hero-wrapper__nav-next
+                        img(src="/assets/images/general/red-arrow.svg", alt="")
+                .hero-wrapper__left.swiper-slide
+                    h1.hero-title Никита Соколов
+                    h2.hero-subtitle Front-end<br><span>Разработчик</span>
+                    .hero-statistic__list 
+                        .hero-statistic__item
+                            p.statistic-numeral 03+
+                            p.statistic-text Года опыта<br>в web-разработке
+                        .hero-statistic__item
+                            p.statistic-numeral 20+
+                            p.statistic-text Реализованных<br>проектов
+                    .btn-wrapper.btn-wrapper--hero-left
+                        a(href="/about.html").btn Обо мне <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L15.0711 10.3431C15.4616 9.95262 15.4616 9.31946 15.0711 8.92893C14.6805 8.53841 14.0474 8.53841 13.6569 8.92893L8 14.5858L2.34315 8.92893C1.95262 8.53841 1.31946 8.53841 0.928932 8.92893C0.538407 9.31946 0.538407 9.95262 0.928932 10.3431L7.29289 16.7071ZM7 -4.37114e-08L7 16L9 16L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/></svg>
+                .hero-wrapper__right.swiper-slide
+                    h2.portfolio-title Портфолио
+                    .hero-slider__container
+                        .portfolio-slider__list.swiper-wrapper
+                            .portfolio-slider__item.swiper-slide
+                                .portfolio-slider__item-left 
+                                    img(src="/assets/images/general/slide-test.png", alt="")
+                                .portfolio-slider__item-right
+                                    a.portfolio-slider__item-site(href="#") pod-zamkom.ru 1
+                                    p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
+                                    p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
+                            .portfolio-slider__item.swiper-slide
+                                .portfolio-slider__item-left 
+                                    img(src="/assets/images/general/slide-test.png", alt="")
+                                .portfolio-slider__item-right
+                                    a.portfolio-slider__item-site(href="#") pod-zamkom.ru 2
+                                    p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
+                                    p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
+                            .portfolio-slider__item.swiper-slide
+                                .portfolio-slider__item-left 
+                                    img(src="/assets/images/general/slide-test.png", alt="")
+                                .portfolio-slider__item-right
+                                    a.portfolio-slider__item-site(href="#") pod-zamkom.ru 3
+                                    p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
+                                    p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
+                            .portfolio-slider__item.swiper-slide
+                                .portfolio-slider__item-left 
+                                    img(src="/assets/images/general/slide-test.png", alt="")
+                                .portfolio-slider__item-right
+                                    a.portfolio-slider__item-site(href="#") pod-zamkom.ru 4
+                                    p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
+                                    p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
+                            .portfolio-slider__item.swiper-slide
+                                .portfolio-slider__item-left 
+                                    img(src="/assets/images/general/slide-test.png", alt="")
+                                .portfolio-slider__item-right
+                                    a.portfolio-slider__item-site(href="#") pod-zamkom.ru 5
+                                    p.portfolio-slider__item-task Верстка и интеграция на CMS Modx Revo
+                                    p.portfolio-slider__item-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    a.portfolio-slider__item-detail(href="/portfolio-detail.html") Подробнее
+                    .hero-slider__nav
+                        .swiper-pagination.swiper-pagination--hero
+                        .pagination-line
+                        .swiper-counter
+                            <span class="current">1</span> / <span class="total">0</span>
+                    .btn-wrapper.btn-wrapper--hero-right
+                        a(href="/portfolio.html").btn Все работы <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29289 16.7071C7.68342 17.0976 8.31658 17.0976 8.70711 16.7071L15.0711 10.3431C15.4616 9.95262 15.4616 9.31946 15.0711 8.92893C14.6805 8.53841 14.0474 8.53841 13.6569 8.92893L8 14.5858L2.34315 8.92893C1.95262 8.53841 1.31946 8.53841 0.928932 8.92893C0.538407 9.31946 0.538407 9.95262 0.928932 10.3431L7.29289 16.7071ZM7 -4.37114e-08L7 16L9 16L9 4.37114e-08L7 -4.37114e-08Z" fill="white"/></svg>

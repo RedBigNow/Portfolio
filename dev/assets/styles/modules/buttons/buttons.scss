@@ -4,13 +4,13 @@
 
 .btn {
     display: block;
+    border: 1px solid #fff;
+    padding: 12px 0;
     width: 250px;
     text-align: center;
-    padding: 12px 0;
-    border: 1px solid #fff;
-    color: #fff;
     text-decoration: none;
-    transition: .3s;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -18,8 +18,9 @@
     background: #fff;
 }
 
-input[disabled], button[disabled] {
-    background: #ccc !important;
+input[disabled],
+button[disabled] {
     border: 1px solid #ccc !important;
+    background: #ccc !important;
     cursor: not-allowed !important;
 }

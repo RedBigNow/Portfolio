@@ -10,24 +10,21 @@ footer {
     z-index: 9;
     display: none;
     opacity: 0.3;
+    transition: 0.3s;
     cursor: pointer;
-    transition: .3s;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 20%;
         top: -50px;
-        background: url(/assets/images/general/arrow-top.svg) no-repeat;
-        height: 100%;
         width: 100%;
-        -webkit-transition: .3s;
-        -o-transition: .3s;
-        transition: .3s;
+        height: 100%;
+        background: url("../images/general/arrow-top.svg") no-repeat;
+        transition: 0.3s;
     }
 
     &:hover {
-
         opacity: 1;
 
         &::after {
@@ -41,5 +38,24 @@ footer {
     font-weight: 600;
     font-size: 16px;
     color: $red;
-    transition: .3s;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 769px) {
+    .back-top {
+        right: 10px;
+        bottom: 80px;
+        opacity: 0.5;
+        transform: scale(0.8);
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .back-top {
+        transform: scale(0.6);
+    }
 }

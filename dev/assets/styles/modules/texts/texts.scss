@@ -1,65 +1,81 @@
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-  font-style: normal;
-  line-height: 125%;
-  letter-spacing: 0.01em;
-}
-
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 21px;
-}
-
-h4 {
-  font-size: 18px;
-}
-
-h5 {
-  font-size: 16px;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-  font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 125%;
+    letter-spacing: 0.02rem;
 }
 
 h2.section-title {
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 125%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+    font-weight: 900;
+    font-size: 3.4rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    text-transform: uppercase;
+    color: transparent;
 }
 
 p {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 150%;
-  letter-spacing: 0.01em;
-  margin: 15px 0;
-}
-
-@media screen and (max-width: 576px) {
-
-  p {
-    font-size: 14px;
-  }
-
+    margin: 15px 0;
+    font-weight: normal;
+    line-height: 150%;
+    letter-spacing: 0.02rem;
 }
 
 a {
-  letter-spacing: 0.01em;
+    line-height: 125%;
+    letter-spacing: 0.02rem;
 }
 
-a, a:visited, a:focus, a:active, a:hover {
-  outline: 0 none !important;
+a,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+    outline: 0 none !important;
+}
+
+@media screen and (max-width: 1200px) {
+    h2.section-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    h2.section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    h2.section-title {
+        font-size: 2rem;
+    }
+
+    .back-end {
+        h2.section-title {
+            padding-top: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h2.section-title {
+        font-size: 1.2rem;
+    }
+
+    .back-end {
+        h2.section-title {
+            padding-top: 30px;
+        }
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
 }

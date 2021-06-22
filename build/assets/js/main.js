@@ -1,12 +1,12 @@
 "use strict";
 
-//Подстроить высоту фоновых линий под высоту всего контента
-$(window).on('load resize', function () {
-  var heightWrapper = document.querySelector(".wrapper").scrollHeight;
-  document.querySelector(".bg-line").style.height = heightWrapper + "px";
-});
 $(document).ready(function () {
-  //Анимация перехода на другую страницу
+  //Подстроить высоту фоновых линий под высоту всего контента
+  $(window).on('load resize', function () {
+    var heightWrapper = document.querySelector(".wrapper").scrollHeight;
+    document.querySelector(".bg-line").style.height = heightWrapper + "px";
+  }); //Анимация перехода на другую страницу
+
   $('a').click(function (e) {
     window.goto = $(this).attr("href");
     new Promise(function (resolve, reject) {
@@ -82,7 +82,28 @@ $(document).ready(function () {
       $('.menu-container').fadeOut();
       $('body').removeClass('scroll-disable');
     }
-  }); //Настройки слайдера на главном экране
+  }); //Инилиализация поэкранного скролла на главной странице
+
+  $(window).on('load resize', function () {
+    if ($(window).width() < 1000) {
+      var hero = new Swiper('.hero-content', {
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        navigation: {
+          nextEl: '.hero-wrapper__nav-next',
+          prevEl: '.hero-wrapper__nav-prev'
+        }
+        /*,
+        autoplay: {
+           delay: 5000
+        }*/
+
+      });
+    }
+  }); //Настройки слайдера с кейсами на главной странице
 
   var heroSlider = new Swiper('.hero-slider__container', {
     slidesPerView: 1,
@@ -94,9 +115,12 @@ $(document).ready(function () {
       el: ".swiper-pagination",
       clickable: true
     },
+    nested: true
+    /*,
     autoplay: {
-      delay: 5000
-    }
+    delay: 5000
+    }*/
+
   }); //Вывод общего кол-ва слайдов
 
   var SlidesTotal = $('.portfolio-slider__item').length;

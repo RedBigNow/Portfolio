@@ -1,102 +1,96 @@
 .wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .container {
-    padding: 0 15px;
+    position: relative;
     margin: 0 auto;
+    padding: 0 15px;
     width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        width: 546px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 739px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 962px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1320px) {
+    .container {
+        width: 1260px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 1380px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        padding: 0 60px;
+        width: 1540px;
+    }
+}
+
+.container--bg-line {
     position: relative;
-  }
-  
-  @media (min-width: 768px) {
-  
-    .container {
-      width: 750px;
-    }
-  
-  }
-  
-  @media (min-width: 992px) {
-  
-    .container {
-      width: 970px;
-    }
+}
 
-  }
-  
-  @media (min-width: 1200px) {
-  
-    .container {
-      width: 1170px;
-    }
-
-  }
-
-  @media (min-width: 1320px) {
-  
-    .container {
-      width: 1290px;
-    }
-
-  }
-
-  @media (min-width: 1440px) {
-  
-    .container {
-      width: 1410px;
-    }
-
-  }
-  
-  @media (min-width: 1660px) {
-  
-    .container {
-      width: 1540px;
-      padding: 0 60px;
-    }
-    
-  }
-
-  .container--bg-line {
-    position: relative;
-  }
-  
-  .bg-line {
+.bg-line {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    //Высоту элемента получаем через JS(Файл main.js).
-  }
-  
-  .bg-line__item {
+    // Высоту элемента получаем через JS(Файл main.js).
+}
+
+.bg-line__item {
     position: absolute;
+    left: 0;
+    top: 0;
     z-index: -1;
-    left: 0;
-    top: 0;
-    height: 100%;
     width: 1px;
+    height: 100%;
     background: #fff;
     opacity: 0.1;
-  }
-  
-  .bg-line__item:nth-child(2) {
+}
+
+.bg-line__item:nth-child(2) {
     left: 25%;
-  }
-  
-  .bg-line__item:nth-child(3) {
+}
+
+.bg-line__item:nth-child(3) {
     left: 50%;
-  }
-  
-  .bg-line__item:nth-child(4) {
+}
+
+.bg-line__item:nth-child(4) {
     left: 75%;
-  }
-  
-  .bg-line__item:nth-child(5) {
+}
+
+.bg-line__item:nth-child(5) {
     left: 100%;
-  }
+}
