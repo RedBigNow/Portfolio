@@ -24,3 +24,11 @@ button[disabled] {
     background: #ccc !important;
     cursor: not-allowed !important;
 }
+
+@media screen and (max-width: 576px) {
+    .btn {
+        padding: 14px 0;
+        width: 200px;
+        font-size: 0.8rem;
+    }
+}

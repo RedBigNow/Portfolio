@@ -137,6 +137,7 @@ a.header-contact__item {
 }
 
 .header-contact__item-icon svg {
+    margin-bottom: -5px;
     width: 24px;
     height: auto;
     transition: 0.3s;
@@ -388,7 +389,7 @@ a.nav-menu__item-link {
         margin-right: 40px;
 
         a {
-            font-weight: 600;
+            font-weight: 400;
             text-decoration: none;
             color: #fff;
         }
