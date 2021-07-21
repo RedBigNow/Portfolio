@@ -1,4 +1,4 @@
-# Личное портфолио.
+# Личное портфолио. [ns.meduza-web.ru](https://ns.meduza-web.ru/)
 Используется связка `Gulp` + `Pug` + `SCSS`.
 
 Дополнительно подключен `Stylelint`.
