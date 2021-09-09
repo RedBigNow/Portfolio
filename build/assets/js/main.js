@@ -1,9 +1,9 @@
 "use strict";
 
 //Подстроить высоту фоновых линий под высоту всего контента
-$(window).on('load resize', function () {
-  var heightWrapper = document.querySelector(".wrapper").scrollHeight;
-  document.querySelector(".bg-line").style.height = heightWrapper + "px";
+$(window).on('load', function () {
+  var heightContent = document.querySelector(".content").scrollHeight;
+  document.querySelector(".bg-line").style.height = heightContent + "px";
 }); //Анимация после открытия страницы
 
 $(window).on('load', function () {
@@ -111,25 +111,63 @@ $(document).ready(function () {
     $(".current").text(heroSlider.realIndex + 1);
     console.log(heroSlider.realIndex);
   }); //Автоматический скролл на странице "Портфолио"
+  // var portfolio = $('.portfolio');
+  // var portfolioHeight = $(".portfolio").prop('scrollHeight');
+  // $(portfolio).animate({scrollTop: portfolioHeight}, 60000, "linear"); 
+  //Убираем автоматический скролл если пользователь скроллит страницу сам
+  // $(portfolio).on('scroll mousedown DOMMouseScroll mousewheel keyup', function(e) {
+  //     if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel"){
+  //         portfolio.stop();
+  //     }
+  // });
+  //Убираем автоматический скролл если пользователь зашел не с компьютера
+  // $(window).on('load resize', function() {
+  //     var width = $(window).width();
+  //     if (width <= 992) {
+  //         portfolio.stop();
+  //     }
+  // });
+  // Фильтр проектов на странице "Портфолио"
+  // $('.project-btn').on('click', function () {
+  //     $(this).addClass('project-btn--active').siblings().removeClass('project-btn--active');
+  //     let category = $(this).data("category");
+  //     $('.project-item').each(function() {
+  //         if(category == 'all') {
+  //             $(this).fadeIn();
+  //         } else if( $(this).hasClass(category) ) { 
+  //             $(this).fadeIn();
+  //         } else {
+  //             $(this).fadeOut();
+  //         }
+  //     });
+  // });
 
-  var portfolio = $('.portfolio');
-  var portfolioHeight = $(".portfolio").prop('scrollHeight');
-  $(portfolio).animate({
-    scrollTop: portfolioHeight
-  }, 60000, "linear"); //Убираем автоматический скролл если пользователь скроллит страницу сам
+  $('.project-btn').on('click', function () {
+    $(this).addClass('project-btn--active').siblings().removeClass('project-btn--active');
+    var category = $(this).data("category");
+    $('.project-item').each(function () {
+      if (category == 'all') {
+        $(this).fadeIn();
+      } else if ($(this).hasClass(category)) {
+        $(this).fadeIn();
+      } else {
+        $(this).fadeOut();
+      }
+    }); //После фильтрации меняется высота контента, поэтому нужно менять и высоту фоновых линий, чтобы избежать пустых пространств внизу
 
-  $(portfolio).on('scroll mousedown DOMMouseScroll mousewheel keyup', function (e) {
-    if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
-      portfolio.stop();
-    }
-  }); //Убираем автоматический скролл если пользователь зашел не с компьютера
+    var i = 0;
 
-  $(window).on('load resize', function () {
-    var width = $(window).width();
+    var removeContentHeight = function removeContentHeight() {
+      if (i <= 4) {
+        i++;
+        var heightContent = $(".content").height();
+        document.querySelector(".bg-line").style.height = heightContent + "px";
+      } else {
+        clearInterval(intervalId);
+      }
+    };
 
-    if (width <= 992) {
-      portfolio.stop();
-    }
+    var intervalId = setInterval(removeContentHeight, 100);
   });
 }); //Parallax эффект при движении мыши у назначенных элементов
 

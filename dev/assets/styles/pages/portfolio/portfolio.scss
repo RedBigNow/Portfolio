@@ -1,21 +1,52 @@
-.portfolio {
-    overflow-y: scroll;
-    height: 100vh;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-    -webkit-mask-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-    -webkit-mask-size: 100% 50%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: top, bottom;
+.projects-filter {
+    display: flex;
+    align-items: center;
+    padding-top: 15%;
+}
 
-    &::-webkit-scrollbar {
-        background: transparent;
+.project-btn {
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.project-btn--active {
+        color: $black;
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projects-filter {
+        padding-top: 25%;
+    }
+
+    .project-btn {
+        padding: 12px 25px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-filter {
+        padding-top: 30%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects-filter {
+        flex-wrap: wrap;
+    }
+
+    .project-btn {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
     }
 }
 
 .project-list {
     counter-reset: number;
     position: relative;
-    padding: 45vh 0 20vh;
+    padding: 10vh 0 20vh;
 }
 
 .project-item {
@@ -106,12 +137,16 @@ p.project-item__descr {
     }
 }
 
-.portfolio-scroll img {
-    position: absolute;
-    right: 60px;
-    bottom: 60px;
-    width: 100px;
-    height: 100px;
+.portfolio-scroll {
+    display: none;
+
+    img {
+        position: absolute;
+        right: 60px;
+        bottom: 60px;
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -152,6 +187,10 @@ p.project-item__descr {
 }
 
 @media screen and (max-width: 576px) {
+    .project-list {
+        padding: 5vh 0 10vh;
+    }
+
     h2.project-item__title {
         font-weight: bold;
         font-size: 1rem;
